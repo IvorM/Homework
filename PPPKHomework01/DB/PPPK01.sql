@@ -12,7 +12,31 @@ create table Country
 )
 go
 
-insert into Country(Name)
+insert into Country
 values('Hrvatska'),('BIH'),('Slovenija')
 go
 
+create proc spGetCountries
+as
+begin
+select * from Country
+end
+go
+
+create proc spDeleteCountries
+@IDCountry int
+as
+begin
+delete from Country
+where IDCountry=@IDCountry
+end
+go
+
+create proc spInsertCountry
+@CountyName nvarchar(50)
+as
+begin
+insert into Country
+values(@CountyName)
+end
+go
