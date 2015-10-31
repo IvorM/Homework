@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Assignment01.Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    PPPK - Assignment 01
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                &nbsp;
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" ForeColor="White" BackColor="#4b6c9e">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/ListOfCountries.aspx" Text="List of countries" Value="List of countries"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/InsertCountry.aspx" Text="Add country" Value="Add country"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>  
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
+
