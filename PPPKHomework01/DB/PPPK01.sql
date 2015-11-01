@@ -40,3 +40,12 @@ insert into Country
 values(@CountyName)
 end
 go
+
+create proc spDeleteCountriesByName
+@CountryName nvarchar(50)
+as
+begin
+delete from Country
+where Name=@CountryName
+end
+go
